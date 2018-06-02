@@ -5,4 +5,5 @@
 目前只有 Brackets 的版本，欢迎 Fork & 做其它编辑器的版本
 
 效果预览：
+
 ![image](https://raw.githubusercontent.com/BlinkDL/BlinkColorTheme/master/preview.png)
