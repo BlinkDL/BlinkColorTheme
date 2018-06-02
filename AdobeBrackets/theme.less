@@ -1,0 +1,174 @@
+/* Blink Dark Theme  */
+
+@base01: #333; //高亮当前行
+@base02: #333; //选择区域
+@base04: #a59f85; // USELESS
+@base09: #fd971f; // USELESS
+@black: #292723; //背景
+@dark: #777; //注释和行号
+@darker: #999; // 括号等等
+@white: #bbb; // 属性，函数，+-*/.
+@red: #d44; // 关键字
+@blue: #0ad; // 变量
+@yellow: #b0b000; //声明
+@purple: #95b;
+@pink: #f5a;
+@orange: #d50; // 数字
+@green: #00b400; // 字符串
+
+/* Code Styling */
+
+.CodeMirror {
+    line-height: 1.2;
+}
+.CodeMirror-scroll {
+    // Background color of main window
+    background-color: @black;
+    // Color of otherwise un-styled text
+    color: @darker;
+}
+.CodeMirror-gutters {
+    // Gutter to the left
+    background-color: @black;
+}
+.CodeMirror-linenumber {
+    // Line numbers in the gutter
+    color: @dark;
+}
+.CodeMirror-selected {
+    // Highlighed text
+    background-color: @base02;
+}
+.CodeMirror-cursor {
+    // The cursor
+    border-left: 1px solid @darker;
+}
+.CodeMirror-matchingbracket,
+.CodeMirror-matchingtag {
+    // When you click a tag/bracket and the matching one is highlighted
+    background: @base02 !important;
+    color: @darker !important;
+    border-bottom: 1px solid @red !important;
+}
+.CodeMirror-foldgutter-open:after {
+    // Those little arrows in the gutter
+    color: @dark;
+}
+.CodeMirror-foldgutter-folded:after {
+    // The arrows after you collapse code
+    color: @base04;
+}
+.CodeMirror.over-gutter,
+.CodeMirror-activeline {
+    .CodeMirror-foldgutter-open:after {
+        // Arrows when hovering on the gutter
+        color: @darker;
+    }
+}
+.CodeMirror-foldmarker {
+    // The [...] marking collapsed code
+    border-color: @darker;
+    background-color: @darker;
+    color: @base02;
+}
+.CodeMirror-searching {
+    // Ctrl + F results
+    background-color: @orange;
+    // Selected result
+    &.searching-current-match {
+        background-color: @base09;
+    }
+}
+
+/* Non-editor Styling */
+
+#image-holder,
+#not-editor {
+    background-color: @black;
+}
+#image-holder {
+    color: @base04;
+}
+.view-pane .image-view {
+    color: @darker;
+}
+
+/* All 'dem swatches */
+
+.cm-m-xml {
+    color: @white;
+}
+.cm-atom,
+.cm-string,
+.cm-string-2,
+.cm-hr,
+{
+    color: @green;
+}
+.cm-number,
+.cm-plus {
+    color: @orange;
+}
+.cm-attribute {
+    color: @white;
+}
+.cm-operator {
+    color: @white;
+}
+.cm-property {
+    color: @blue; //属性
+}
+.cm-variable {
+    color: @white; //函数？方法？
+}
+.cm-variable-2 {
+    color: @white; //变量
+}
+.cm-variable-3 {
+    color: @pink; //css的修饰语
+}
+.cm-def {
+    color: @yellow; //变量声明
+}
+.cm-meta,
+.cm-bracket {
+    color: @darker;
+}
+.cm-comment {
+    color: @dark;
+}
+.cm-error,
+.cm-minus {
+    color: @base09;
+}
+.cm-header {
+    color: @blue;
+}
+.cm-link {
+    color: @blue;
+    text-decoration: none;
+}
+.cm-rangeinfo {
+    color: @white;
+}
+.cm-keyword,
+.cm-qualifier,
+.cm-builtin,
+.cm-tag,
+.cm-quote {
+    color: @red;
+}
+
+/* Active Line Highlight support */
+
+.CodeMirror-activeline-background {
+    background-color: @base01;
+}
+.CodeMirror-activeline .CodeMirror-linenumber {
+    background-color: @base01;
+}
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+    background: @base01;
+}
+
+/* End of Theme */
